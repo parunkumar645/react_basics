@@ -1,13 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+// import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+// import ParentCom from "./ParentCom";
+// import { Intro } from "./Intro";
+import { MyComponent } from "./MyComponent";
+// import { ToyRoom } from "./ToyRoom";
+// import ParentComp from "./ParentComp";
+// import { Like } from "./Like";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <Like /> */}
+    {/* <ParentComp />/ */}
+    {/* <ToyRoom /> */}
+    <MyComponent />
+    {/* <Intro /> */}
+    {/* <ParentCom/> */}
   </React.StrictMode>
 );
 

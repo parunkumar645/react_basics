@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
+
+  function handleLike() {
+    setLikes(likes + 1);
+  }
+
+  function handleDislike() {
+    setDislikes(dislikes + 1);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <p>Likes: {likes}</p>
+      <p>Dislikes: {dislikes}</p>
+      <div className="icons">
+        <i id="like" onClick={handleLike} className="fa-solid fa-heart"></i>
+        <i
+          id="dislike"
+          onClick={handleDislike}
+          className="fa-solid fa-thumbs-down"
+        ></i>
+      </div>
     </div>
   );
 }
